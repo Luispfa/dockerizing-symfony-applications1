@@ -1,0 +1,44 @@
+{
+  "Services": {
+    "database": {
+      "Env": [
+        "MYSQL_ROOT_PASSWORD=local", 
+        "MYSQL_PASSWORD=local", 
+        "MYSQL_USER=root"
+      ], 
+      "Image": "mysql@sha256:96edf37370df96d2a4ee1715cc5c7820a0ec6286551a927981ed50f0273d9b43", 
+      "Networks": [], 
+      "Ports": [
+        {
+          "Port": 3306, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "phpmyadmin": {
+      "Env": [
+        "MYSQL_PASSWORD=local", 
+        "MYSQL_USERNAME=root"
+      ], 
+      "Image": "corbinu/docker-phpmyadmin@sha256:8ba64f73a8f28f62c00c9515171361b9d5f7a0c6f6fa0aa4418839f9974d098d", 
+      "Networks": [], 
+      "Ports": [
+        {
+          "Port": 80, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "z-symfony-docker": {
+      "Image": "iamluc/symfony@sha256:c6542915cae411066f2577092d11a05be3cc5aeb5c76c44582da0562aa3fcb70", 
+      "Networks": [], 
+      "Ports": [
+        {
+          "Port": 80, 
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  }, 
+  "Version": "0.1"
+}

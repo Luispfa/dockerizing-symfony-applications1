@@ -1,0 +1,37 @@
+#symfony
+z-symfony-docker:
+  image: iamluc/symfony
+  ports:
+    - 80:80
+  volumes:
+    - ./:/var/www/html
+  links:
+    - database
+
+#phpmyadmin
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin:latest
+  environment:
+    - PMA_ARBITRARY=1
+    - MYSQL_ROOT_PASSWORD=local
+    - PMA_HOST=database
+    - PMA_USER=root
+    - PMA_PASSWORD=local
+  restart: always
+  ports:
+    - 8080:80
+  links:
+    - database
+
+#mysql
+database:
+  build: docker/mysql
+  ports:
+   - "3306:3306"  
+  environment:
+     - MYSQL_ROOT_PASSWORD=local
+     - MYSQL_DATABASE=european_parliament
+     - MYSQL_USER=root
+     - MYSQL_PASSWORD=local
+  volumes:
+    - /var/lib/mysql:/var/lib/mysql
