@@ -35,3 +35,4 @@ database:
      - MYSQL_PASSWORD=your_password
   volumes:
     - /var/lib/mysql:/var/lib/mysql
+    
