@@ -28,6 +28,7 @@ Step 3: Stop all services that  using port 80 and 3306 in your localhost. In my 
 ------
 
 $ sudo service apache2 stop 
+
 $ sudo service mysql stop
 
 
@@ -48,6 +49,7 @@ Step 6 : In your browser (In my case don't work localhost so I uused the IP)
 
 To see site : http://127.0.0.1:80
 
+
 To see phpMyadmin : http://127.0.0.1:8080
 
 
@@ -65,6 +67,7 @@ Step 2:
 Now, you are into file system  (ex:  root@a73e1b74109f:/# )
 
 root@a73e1b74109f:/#  mysql -u root -p
+
 Enter password: 
 
 mysql> select * from your_table;
