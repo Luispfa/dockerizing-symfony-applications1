@@ -13,10 +13,10 @@ phpmyadmin:
   image: phpmyadmin/phpmyadmin:latest
   environment:
     - PMA_ARBITRARY=1
-    - MYSQL_ROOT_PASSWORD=local
+    - MYSQL_ROOT_PASSWORD=your_password
     - PMA_HOST=database
-    - PMA_USER=root
-    - PMA_PASSWORD=local
+    - PMA_USER=your_user
+    - PMA_PASSWORD=your_password
   restart: always
   ports:
     - 8080:80
@@ -29,9 +29,9 @@ database:
   ports:
    - "3306:3306"  
   environment:
-     - MYSQL_ROOT_PASSWORD=local
-     - MYSQL_DATABASE=european_parliament
-     - MYSQL_USER=root
-     - MYSQL_PASSWORD=local
+     - MYSQL_ROOT_PASSWORD=your_password
+     - MYSQL_DATABASE=your_data_base
+     - MYSQL_USER=your_user
+     - MYSQL_PASSWORD=your_password
   volumes:
     - /var/lib/mysql:/var/lib/mysql
