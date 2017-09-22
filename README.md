@@ -5,6 +5,7 @@ A Symfony project created on September 18, 2017, 1:29 pm.
 
 
 Step 1 :
+-------
 
 $ sudo cp /etc/mysql/mysql.conf.d/mysqld.cnf docker/mysql/.
 
