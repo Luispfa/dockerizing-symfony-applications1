@@ -44,7 +44,7 @@ Step 5 :   start up your application by running
 $ docker-compose up --build
 
 
-Step 6 : In your browser (In my case don't work localhost so I uused the IP)
+Step 6 : In your browser (In my case don't work localhost so I used the IP)
 ------
 
 To see site : http://127.0.0.1:80
